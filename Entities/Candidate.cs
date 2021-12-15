@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace HR_Tech.Entities
 {
-    public record Candidate
+    public class Candidate
     {
         [Key]
+        public Guid Id { get; set; }
+
         [DisplayFormat(DataFormatString = "{0:###.###.###-##}", ApplyFormatInEditMode = true)]
-        public string CPF { get; init; }
-        public string Name { get; init; }
-        public JobOpening JobOpening { get; init; }
-        public List<Technology> Technology { get; init; }
+        public string CPF { get; set; }
+        public string Name { get; set; }
+        public JobOpening JobOpening { get; set; }
+        public List<Technology> Technology { get; set; }
     }
 }

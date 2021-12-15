@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HR_Tech.Entities
 {
-    public record JobOpening
+    public class JobOpening
     {
         [Key]
-        public Guid Id { get; init; }
-        public string Name { get; init; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
     }
 }
